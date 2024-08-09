@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPenToSquare, faTrash, faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faPenToSquare, faTrash, faArrowCircleUp, faArrowCircleDown } from '@fortawesome/free-solid-svg-icons';
 
 function Todolist() {
     const [tasks, setTasks] = useState(["Eat", "Hi"]);
@@ -81,10 +81,10 @@ function Todolist() {
                             <FontAwesomeIcon icon={faTrash} />
                         </button>
                         <button className='move-button' onClick={() => moveTaskUp(index)}>
-                            <FontAwesomeIcon icon={faArrowUp} />
+                            <FontAwesomeIcon icon={faArrowCircleUp} />
                         </button>
                         <button className='move-button' onClick={() => moveTaskDown(index)}>
-                            <FontAwesomeIcon icon={faArrowDown} />
+                            <FontAwesomeIcon icon={faArrowCircleDown} />
                         </button>
                     </li>
                 ))}
